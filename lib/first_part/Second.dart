@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Login.dart';
+
 class Second extends StatelessWidget {
   const Second({super.key});
 
@@ -41,15 +43,17 @@ class Second extends StatelessWidget {
                   ),
                   ),
 
+                  SizedBox(height: 60,),
+
                   ElevatedButton.icon(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Second()),
+                          MaterialPageRoute(builder: (context) => Login()),
                         );
                       },
-                      icon: Icon(Icons.arrow_forward),
                       label: Text('Next'),
+                      icon: Icon(Icons.arrow_forward),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFF100D40),
                       iconColor: Colors.white,
