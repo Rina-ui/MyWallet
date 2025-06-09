@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Second.dart';
+
 class First extends StatefulWidget {
   const First({super.key});
 
@@ -15,7 +17,7 @@ class _FirstState extends State<First> {
     Future.delayed(Duration(seconds: 3), () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => First()),
+        MaterialPageRoute(builder: (context) => Second()),
       );
     });
   }
