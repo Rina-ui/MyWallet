@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_wallet/first_part/Verification.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -131,7 +132,7 @@ class _SignupState extends State<Signup> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Signup()),
+                        MaterialPageRoute(builder: (context) => Verification()),
                       );
                     },
                     label: Text('Send OPT'),
