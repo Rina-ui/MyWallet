@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_wallet/first_part/Signup2.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class Verification extends StatefulWidget {
@@ -128,9 +129,31 @@ class _VerificationState extends State<Verification> {
           SizedBox(height: 20,),
             Row(
               children: [
+                Spacer(),
+                ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Sign()),
+                      );
+                    },
+                    label: Text('Continue'),
+                    icon: Icon(Icons.arrow_forward),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFF100D40),
+                        iconColor: Colors.white,
+                        textStyle: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                        )
+                    )
+                )
 
               ],
-            )
+            ),
+
+
           ],
         ),
       )
