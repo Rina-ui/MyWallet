@@ -88,52 +88,50 @@ class _SignState extends State<Sign> {
 
             SizedBox(height: 40,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 60,
-                  width: 160,
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text('First Name',
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          alignment: Alignment.topLeft,
+                          child: Text('First Name',
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
                               color: Color(0xFF100D40),
                             ),
-                          )
-                        ],
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Alex',
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10)
                           ),
                         ),
-                      )
-                    ],
-                  )
+                        TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Alexander',
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10)
+                            ),
+                          ),
+                        )],
+                    ),
                   ),
-                Container(
-                    height: 60,
-                    width: 160,
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10),
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        Row(
-                          children: [
-                            Text('Last Name',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                                color: Color(0xFF100D40),
-                              ),
-                            )
-                          ],
+                        Container(alignment: Alignment.topLeft,
+                          child: Text('Last Name',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                              color: Color(0xFF100D40),
+                            ),
+                          ),
                         ),
                         TextField(
                           decoration: InputDecoration(
@@ -142,14 +140,15 @@ class _SignState extends State<Sign> {
                                 borderRadius: BorderRadius.circular(10)
                             ),
                           ),
-                        )
-                      ],
-                    )
+                        )],
+                    ),
+                  ),
                 ),
               ],
             ),
             SizedBox(height: 40,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Date Of Birth',
                   style: TextStyle(
@@ -159,7 +158,7 @@ class _SignState extends State<Sign> {
                     color: Color(0xFF100D40),
                   ),
                 ),
-                Spacer(),
+
                 Text('(DD/MM/YYYY)',
                   style: TextStyle(
                     fontFamily: 'Poppins',
@@ -181,8 +180,8 @@ class _SignState extends State<Sign> {
 
             SizedBox(height: 20,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Spacer(),
                 ElevatedButton.icon(
                     onPressed: () {
                       Navigator.push(
@@ -201,10 +200,11 @@ class _SignState extends State<Sign> {
                           color: Colors.white,
                         )
                     )
-                )
+                ),
 
               ],
             ),
+
           ],
         ),
       ),
