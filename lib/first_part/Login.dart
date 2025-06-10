@@ -21,7 +21,6 @@ class _LoginState extends State<Login> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 300,),
-
             TextField(
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_outlined),
