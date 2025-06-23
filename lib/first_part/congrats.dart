@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_wallet/SecondPart/HomePage.dart';
 
 class Congrats extends StatelessWidget {
   const Congrats({super.key});
@@ -92,7 +93,7 @@ class Congrats extends StatelessWidget {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => Congrats()),
+                                MaterialPageRoute(builder: (context) => Homepage()),
                               );
                             },
                             label: Text('Dashboard'),

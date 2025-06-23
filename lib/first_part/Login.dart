@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_wallet/SecondPart/HomePage.dart';
 import 'package:my_wallet/first_part/Signup.dart';
 
 class Login extends StatefulWidget {
@@ -85,7 +86,7 @@ class _LoginState extends State<Login> {
                 onPressed: (){
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Login())
+                      MaterialPageRoute(builder: (context) => Homepage())
                   );
                 },
                 style: ElevatedButton.styleFrom(
