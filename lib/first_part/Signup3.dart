@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:my_wallet/first_part/Signup3.dart';
 
-class Sign extends StatefulWidget {
-  const Sign({super.key});
+class Signup3 extends StatefulWidget {
+  const Signup3({super.key});
 
   @override
-  State<Sign> createState() => _SignState();
+  State<Signup3> createState() => _Signup3State();
 }
 
-class _SignState extends State<Sign> {
+class _Signup3State extends State<Signup3> {
+
+  bool _agree = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,7 @@ class _SignState extends State<Sign> {
                 ),
               ],
             ),
-            
+
             SizedBox(height: 20,),
             Row(
               children: [
@@ -72,111 +74,102 @@ class _SignState extends State<Sign> {
               ],
             ),
 
-            SizedBox(height: 30,),
+            SizedBox(height: 20,),
+
+            Text("We need an email for notifications and a password for login purpose.",
+              style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF100D40),
+                  fontFamily: 'Poppins',
+                  letterSpacing: 0
+              ),
+            ),
+
+            SizedBox(height: 20,),
+
             Row(
               children: [
-                Text('Now lets get to know more about you !',
-                  style: TextStyle(
-                      color: Color(0xFF100D40),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 0,
-                      fontFamily: 'Poppins'
-                  ),
-                )
+                Text('Email',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF100D40),
+                  fontFamily: 'Poppins',
+                  letterSpacing: 0
+                ),
+                ),
               ],
             ),
 
-            SizedBox(height: 40,),
-            Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 20),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          alignment: Alignment.topLeft,
-                          child: Text('First Name',
-                            style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                              color: Color(0xFF100D40),
-                            ),
-                          ),
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Alexander',
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)
-                            ),
-                          ),
-                        )],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(alignment: Alignment.topLeft,
-                          child: Text('Last Name',
-                            style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                              color: Color(0xFF100D40),
-                            ),
-                          ),
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Mich',
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)
-                            ),
-                          ),
-                        )],
-                    ),
-                  ),
-                ),
-              ],
+            SizedBox(height: 5,),
+
+            TextField(
+              decoration: InputDecoration(
+                  hintText: 'Alexnder@.com',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20)
+                  )
+              ),
             ),
-            SizedBox(height: 40,),
+
+            SizedBox(height: 30,),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Date Of Birth',
+                Text('Set a Password',
                   style: TextStyle(
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.bold,
-                    fontSize: 15,
+                    letterSpacing: 0,
                     color: Color(0xFF100D40),
                   ),
                 ),
-
-                Text('(DD/MM/YYYY)',
+                
+                Text('Min .8 Characters',
                   style: TextStyle(
-                    fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
-                    fontSize: 10,
+                    fontSize: 12,
+                    letterSpacing: 0,
+                    fontFamily: 'Poppins',
                     color: Color(0xFF100D40),
                   ),
                 )
               ],
             ),
+
+            SizedBox(height: 5,),
+
             TextField(
               decoration: InputDecoration(
-                hintText: '12/02/1999',
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10)
-                ),
+                  hintText: '* * * * * * * *',
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20)
+                  )
               ),
+            ),
+
+            SizedBox(height: 20,),
+
+            Row(
+              children: [
+                Checkbox(
+                    value: _agree,
+                    onChanged: (value){
+                      setState(() {
+                        _agree = value!;
+                      });
+                    }
+                ),
+                Text('I agree to the Terms of service and Privacy Policy',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 0,
+                    color: Color(0xFF100D40),
+                    fontSize: 12
+                  ),
+                )
+              ],
             ),
 
             SizedBox(height: 20,),
@@ -206,8 +199,10 @@ class _SignState extends State<Sign> {
               ],
             ),
 
+
+
           ],
-        ),
+        )
       ),
     );
   }

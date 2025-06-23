@@ -19,28 +19,29 @@ class Second extends StatelessWidget {
           ),
 
           SizedBox(height: 20,),
-
-          Expanded(
-            flex: 1,
+          Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            child: Expanded(
+              flex: 1,
               child: Column(
                 children: [
                   Text('Turn your small savings into something big ',
-                    style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF100D40),
-                    )
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF100D40),
+                      )
                   ),
 
                   SizedBox(height: 30,),
 
                   Text('Lets help you save more money by teaching you how to save and helping you save.',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xFF100D40),
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w400,
-                  ),
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Color(0xFF100D40),
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
 
                   SizedBox(height: 60,),
@@ -54,23 +55,23 @@ class Second extends StatelessWidget {
                       },
                       label: Text('Next'),
                       icon: Icon(Icons.arrow_forward),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF100D40),
-                      iconColor: Colors.white,
-                      textStyle: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white,
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF100D40),
+                          iconColor: Colors.white,
+                          textStyle: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white,
+                          )
                       )
-                    )
                   )
 
                 ],
 
-
               ),
+            ),
+          ),
 
-          )
         ],
       ),
     );
