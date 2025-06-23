@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'congrats.dart';
+
 class Signup3 extends StatefulWidget {
   const Signup3({super.key});
 
@@ -180,7 +182,7 @@ class _Signup3State extends State<Signup3> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Signup3()),
+                        MaterialPageRoute(builder: (context) => Congrats()),
                       );
                     },
                     label: Text('Continue'),
