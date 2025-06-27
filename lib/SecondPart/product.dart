@@ -25,7 +25,7 @@ class Product extends StatelessWidget {
                         bottom: Radius.circular(50),
                       )
                     ),
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(10),
                     child: Row(
                       children: [
                         Icon(Icons.arrow_back_ios),
@@ -44,6 +44,17 @@ class Product extends StatelessWidget {
                         height: 250,
                         width: double.infinity,
                         padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+                                  offset: Offset(0, 10)
+                              ),
+                            ]
+                        ),
                         child: Column(
                           children: [
                             SizedBox(height: 40,),

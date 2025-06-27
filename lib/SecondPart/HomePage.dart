@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_wallet/SecondPart/product.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -84,21 +85,30 @@ class Homepage extends StatelessWidget {
                                       Text('Payements')
                                     ],
                                   ),
-                                  
-                                  Column(
-                                    children: [
-                                      Container(
-                                        height: 50,
-                                        width: 50,
-                                        decoration: BoxDecoration(
-                                          color: Colors.indigo[900],
-                                          borderRadius: BorderRadius.circular(10),
+                                  GestureDetector(
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          height: 50,
+                                          width: 50,
+                                          decoration: BoxDecoration(
+                                            color: Colors.indigo[900],
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          child: Icon(Icons.production_quantity_limits),
                                         ),
-                                        child: Icon(Icons.production_quantity_limits),
-                                      ),
-                                      Text('Products')
-                                    ],
+                                        Text('Products'),
+                                      ],
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Product()),
+                                      );
+                                    }
                                   ),
+
                                   
                                   Column(
                                     children: [
