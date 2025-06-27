@@ -205,7 +205,7 @@ class Homepage extends StatelessWidget {
               SizedBox(height: 200,),
 
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Column(
                     children: [
@@ -214,6 +214,10 @@ class Homepage extends StatelessWidget {
                         width: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Colors.indigo[900]!,
+                            width: 2.0,
+                          ),
                         ),
                         child: Icon(Icons.home_outlined),
                       ),
@@ -228,6 +232,10 @@ class Homepage extends StatelessWidget {
                         width: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Colors.indigo[900]!,
+                            width: 2.0,
+                          ),
                         ),
                         child: Icon(Icons.history),
                       ),
@@ -242,6 +250,10 @@ class Homepage extends StatelessWidget {
                         width: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Colors.indigo[900]!,
+                            width: 2.0,
+                          ),
                         ),
                         child: Icon(Icons.auto_graph),
                       ),
@@ -256,6 +268,10 @@ class Homepage extends StatelessWidget {
                         width: 50,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Colors.indigo[900]!,
+                            width: 2.0,
+                          ),
                         ),
                         child: Icon(Icons.person),
                       ),
